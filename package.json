@@ -11,5 +11,8 @@
   "description": "",
   "devDependencies": {
     "@11ty/eleventy": "^3.0.0"
+  },
+  "dependencies": {
+    "eleventy-plugin-i18n": "^0.1.3"
   }
 }

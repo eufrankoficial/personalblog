@@ -1,26 +1,30 @@
 body {
-    font-family: 'Georgia', serif;
-    background-color: #fdfdfc;
-    color: #222;
-    max-width: 700px;
-    margin: 3rem auto;
-    padding: 0 1rem;
-    line-height: 1.7;
-  }
+  font-family: 'Georgia', serif;
+  background-color: #fdfdfc;
+  color: #000;
+  max-width: 700px;
+  margin: 3rem auto;
+  padding: 0 1rem;
+  line-height: 1.7;
+}
   
   h1, h2, h3 {
     font-family: 'Georgia', serif;
-    color: #111;
+    color: #575761;
   }
   
+
+  .site-title {
+    color: #3B341F;
+  }
+
   a {
-    color: #1b4278;
+    color: #100B00;
     text-decoration: none;
   }
   
   a:hover {
-    color: #1b4278;
-    border-bottom: 1px solid #aaa;
+    color: #100B00;
   }
   
   header, footer {
@@ -96,7 +100,7 @@ body {
   }
   
   .post-content .description {
-    color: #555;
+    color: #100B00;
     margin: 0.5rem 0;
   }
   
@@ -113,12 +117,6 @@ body {
     max-height: 400px;
   }
   
-  .post-meta {
-    font-size: 0.9rem;
-    color: #888;
-    margin-bottom: 2rem;
-    text-align: center;
-  }
   
   main h2 {
     font-size: 1.6rem;

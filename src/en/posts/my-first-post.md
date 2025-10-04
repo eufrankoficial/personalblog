@@ -1,14 +1,16 @@
 ---
-title: "A arte da ausência"
-description: "Um mergulho na presença do que não se vê."
+title: "My first post"
+lang: en
+description: "My first post."
 date: 2025-04-14
 author: "Rafael"
-image: "/img/6.jpg"
+image: "../img/yes.png"
 layout: layout.njk
 tags: post
+permalink: "/en/posts/my-first-post/"
 ---
 
-<h1>A arte da ausência</h1>
+<h1>My first post</h1>
 
 <img src="{{ image }}" alt="Imagem de {{ title }}" class="post-hero">
 

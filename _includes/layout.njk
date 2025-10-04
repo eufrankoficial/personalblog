@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="{{ page.lang }}">
 <head>
   <meta charset="UTF-8">
   <title>{{ title }}</title>
@@ -7,17 +7,16 @@
 </head>
 <body>
   <header>
-    <h1><a href="/">Cerrado morto</a></h1>
+    <h1><a class="site-title" href="/{{ lang }}/">{{ "siteTitle" | t(lang, page) }}</a></h1>
     <nav>
-      <a href="/">Início</a> |
-      <a href="/posts/">Posts</a>
+      <a href="/{{ lang }}/">{{ "home" | t(lang, page) }}</a>
     </nav>
   </header>
   <main>
     {{ content | safe }}
   </main>
   <footer>
-    <p>Feito com Eleventy</p>
+    <p>{{ "footer" | t(page.lang, page) }}</p>
   </footer>
 </body>
 </html>
