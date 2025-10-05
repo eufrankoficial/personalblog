@@ -5,7 +5,7 @@ lang: pt
 tags: ["postsList"]
 pagination:
   data: collections.posts_pt
-  size: 1
+  size: 20
   alias: posts
   reverse: false
 permalink: "/pt/posts/page/{{ pagination.pageNumber + 1 }}/"
