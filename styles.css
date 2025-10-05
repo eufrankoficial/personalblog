@@ -82,6 +82,47 @@ header {
   color: var(--accent);
 }
 
+/* --- Estilo de posts individuais --- */
+
+main p {
+  margin: 1.2rem 0;
+  line-height: 1.8;
+}
+
+main h2 {
+  margin-top: 2.5rem;
+  font-size: 1.4rem;
+  color: var(--accent);
+  border-bottom: 1px solid var(--border);
+  padding-bottom: 0.3rem;
+}
+
+main em, main strong {
+  color: var(--muted);
+}
+
+main blockquote {
+  margin: 1.5rem 0;
+  padding-left: 1rem;
+  border-left: 3px solid var(--accent);
+  font-style: italic;
+  color: var(--muted);
+}
+
+.post-meta {
+  font-size: 0.9rem;
+  color: var(--muted);
+  margin-bottom: 2rem;
+  text-align: left;
+}
+
+main hr {
+  border: none;
+  border-top: 1px solid var(--border);
+  margin: 2rem 0;
+}
+
+
 nav {
   margin-top: 0.4rem;
 }
@@ -113,6 +154,10 @@ h1 {
   font-size: 2rem;
   margin-bottom: 1.5rem;
   color: var(--accent-alt);
+}
+
+.post-title {
+  text-align: left;
 }
 
 h2 {
