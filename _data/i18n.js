@@ -1,12 +1,12 @@
 module.exports = {
   pt: {
-    siteTitle: "Cerrado Morto",
+    siteTitle: "nullio",
     home: "Início",
     posts: "Posts",
     footer: "Feito com Eleventy",
   },
   en: {
-    siteTitle: "Cerrado Morto",
+    siteTitle: "nullio",
     home: "Home",
     posts: "Posts",
     footer: "Made with Eleventy",

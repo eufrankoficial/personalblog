@@ -1,20 +1,35 @@
 <!DOCTYPE html>
-<html lang="{{ page.lang }}">
+<html lang="{{ lang }}">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>{{ title }}</title>
   <link rel="stylesheet" href="/styles.css">
 </head>
 <body>
   <header>
+    <!-- 🔸 Switcher de idioma no canto direito -->
+    <div class="lang-switcher">
+      {% if lang == "pt" %}
+        <a href="/en/" hreflang="en">EN</a>
+        <span class="current">PT</span>
+      {% else %}
+        <span class="current">EN</span>
+        <a href="/pt/" hreflang="pt">PT</a>
+      {% endif %}
+    </div>
+
     <h1><a class="site-title" href="/{{ lang }}/">{{ "siteTitle" | t(lang, page) }}</a></h1>
     <nav>
       <a href="/{{ lang }}/">{{ "home" | t(lang, page) }}</a>
+      <a href="/{{ lang }}/posts">{{ "posts" | t(lang, page) }}</a>
     </nav>
   </header>
+
   <main>
     {{ content | safe }}
   </main>
+
   <footer>
     <p>{{ "footer" | t(page.lang, page) }}</p>
   </footer>
