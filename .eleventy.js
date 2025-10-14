@@ -8,32 +8,32 @@ module.exports = function (eleventyConfig) {
 
 
   eleventyConfig.addFilter("t", function (key, lang, page) {
-  // 1️⃣ tenta usar o lang explícito
-  let locale = lang;
+    // 1️⃣ tenta usar o lang explícito
+    let locale = lang;
 
-  // 2️⃣ se não tiver lang, tenta deduzir da URL
-  if (!locale && page && page.url) {
-    const firstSeg = page.url.split("/").filter(Boolean)[0];
-    if (["pt", "en"].includes(firstSeg)) {
-      locale = firstSeg;
+    // 2️⃣ se não tiver lang, tenta deduzir da URL
+    if (!locale && page && page.url) {
+      const firstSeg = page.url.split("/").filter(Boolean)[0];
+      if (["pt", "en"].includes(firstSeg)) {
+        locale = firstSeg;
+      }
     }
-  }
 
-  // 3️⃣ fallback final
-  if (!locale) locale = "pt";
+    // 3️⃣ fallback final
+    if (!locale) locale = "pt";
 
-  const translations = require("./_data/i18n");
-  return translations[locale] && translations[locale][key]
-    ? translations[locale][key]
-    : key;
-});
+    const translations = require("./_data/i18n");
+    return translations[locale] && translations[locale][key]
+      ? translations[locale][key]
+      : key;
+  });
 
   eleventyConfig.addCollection("posts_pt", (api) =>
-    api.getFilteredByTag("post").filter((p) => /^(\/pt\/)/.test(p.url))
+    api.getFilteredByTag("post").filter((p) => /^(\/pt\/)/.test(p.url)).sort((a, b) => b.date - a.date)
   );
 
   eleventyConfig.addCollection("posts_en", (api) =>
-    api.getFilteredByTag("post").filter((p) => /^(\/en\/)/.test(p.url))
+    api.getFilteredByTag("post").filter((p) => /^(\/en\/)/.test(p.url)).sort((a, b) => b.date - a.date)
   );
 
     // Coleção de posts multilíngua
